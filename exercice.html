@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>exercice</title>
+  </head>
+  <body></body>
+  <script>
+    function login() {
+      do {
+        var log = prompt("entre votre login");
+        if (log == null) return;
+      } while (log != "login");
+      var nombreEssai = 0;
+      do {
+        nombreEssai++;
+        var password = prompt("entre votre password \n essai " + nombreEssai);
+        if (nombreEssai > 3) {
+          document.write("vous avez essayez entre le code 3 fois");
+          return;
+        }
+      } while (password != "pass");
+      var nom = prompt("entrer votre nom");
+      if (nom == null) return;
+      if (confirm("donc, votre nom est " + nom)) {
+        document.write("merci de votre visite " + nom);
+      }
+    }
+    login();
+  </script>
+</html>
